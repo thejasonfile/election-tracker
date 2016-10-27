@@ -1,0 +1,27 @@
+<h1>Add a State</h1>
+
+<%= form_for @state do |f| %>
+  <p>
+  <%= f.label "Name" %>
+  <%= f.text_field :name %>
+  </p>
+  <p>
+  <%= f.label "Electoral Votes" %>
+  <%= f.number_field :electoral_votes %>
+  </p>
+  <p>
+  <%= f.label "Predicted" %>
+  <%= f.select :predicted, [['solid repulican'], ['leans republican'], ['battleground'], ['leans democrat'], ['solid democrat']] %>
+  </p>
+  <p>
+  <%= f.label "Called" %>
+  <%= f.check_box :called %>
+  </p>
+  <p>
+  <%= f.label "Picture URL" %>
+  <%= f.text_field :picture_url %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -5,6 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-hc = Candidate.create(name: "Hillary Clinton", party: "Democrats", delegate_count: 0)
-dt = Candidate.create(name: "Don", party: "Democrats", delegate_count: 0)
