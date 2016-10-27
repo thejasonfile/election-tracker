@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  delegates: 1
+  predicted: MyString
+  called: false
+
+two:
+  name: MyString
+  delegates: 1
+  predicted: MyString
+  called: false
