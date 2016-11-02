@@ -1,10 +1,21 @@
 <h1>All States</h1>
 
+
+<table>
+  <th>State Name</th>
+  <th>Electoral Votes</th>
+  <th>Predicted</th>
+  <th>Called?</th>
+  <th>Winner</th>
 <% @states.each do |state| %>
-  <h3><%= link_to state.name, state_path(state.id) %></h3>
-  <li>Electoral Votes: <%= state.electoral_votes %></li>
-  <li>Predicted: <%= state.predicted %></li>
-  <li>Picture URL: <%= state.picture_url %></li>
-  <li>Called? <%= state.called %></li>
-  <li>Winner: <%= state.winner %></li>
+  <tr>
+    <td><%= link_to state.name, state_path(state.id) %></td>
+    <td><%= state.electoral_votes %></td>
+    <td><%= state.predicted %></td>
+    <td><%= state.called %></td>
+    <td><%= state.winner %></td>
+    <td><%= button_to "Edit State", edit_state_path(state), method: :get %></td>
+  </tr>
 <% end %>
+
+</table>
