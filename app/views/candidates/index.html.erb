@@ -1,3 +1,9 @@
+<h1>All Candidates</h1>
+
+
 <% @candidates.each do |candidate| %>
-  <%= candidate.name %>
+  <h3>Name: <%= candidate.name %></h3>
+  <li>Party: <%= candidate.party %></li>
+  <li>Electoral Votes: <%= candidate.electoral_votes %></li>
+  <li>Votes Needed to Win: <%= candidate.votes_needed %></li>
 <% end %>

@@ -1,4 +1,4 @@
-<h1>Add a State</h1>
+<h1>Edit <%=@state.name %></h1>
 
 <%= form_for @state do |f| %>
   <p>
@@ -11,11 +11,11 @@
   </p>
   <p>
   <%= f.label "Predicted" %>
-  <%= f.select :predicted, [['Solid Repulican'], ['Leans Republican'], ['Battleground'], ['Leans Democrat'], ['Solid Democrat']] %>
+  <%= f.select :predicted, [['Solid Repulican'], ['Leans Republican'], ['Battleground'], ['Leans Democrat'], ['Solid Democrat']], 'Battleground' %>
   </p>
   <p>
     <%= f.label "Winner" %>
-    <%= f.select :winner, [['Hillary Clinton'], ['Donald Trump'], ['Not Called']] %>
+    <%= f.select :winner, [['Hillary Clinton'], ['Donald Trump'], ['Not Called']], 'Not Called' %>
   </p>
   <p>
   <%= f.label "Called" %>

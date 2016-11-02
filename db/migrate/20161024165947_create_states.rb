@@ -4,9 +4,10 @@ class CreateStates < ActiveRecord::Migration[5.0]
       t.string :name
       t.integer :electoral_votes
       t.string :predicted
-      t.boolean :called
+      t.string :winner
+      t.boolean :called, default: false
       t.string :picture_url
-      t.integer :candidate_id
+      t.integer :candidate_id, default: 1
 
       t.timestamps
     end

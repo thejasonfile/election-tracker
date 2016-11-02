@@ -13,8 +13,18 @@ class StatesController < ApplicationController
   end
 
   def create
-    @state = State.create(state_params)
     byebug
+    @state = State.create(state_params)
+    redirect_to @state
+  end
+
+  def edit
+    @state = State.find(params[:id])
+  end
+
+  def update
+    @state = State.find(params[:id])
+    @state.update(state_params)
     redirect_to @state
   end
 

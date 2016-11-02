@@ -1,5 +1,9 @@
-<ul>
+<h1>All States</h1>
+
 <% @states.each do |state| %>
-  <li><%= state.name %></li>
+  <h3><%= state.name %></h3>
+  <li><%= state.electoral_votes %></li>
+  <li><%= state.predicted %></li>
+  <li><%= state.picture_url %></li>
+  <li><%= state.called %></li>
 <% end %>
-</ul>

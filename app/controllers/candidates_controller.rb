@@ -27,10 +27,6 @@ class CandidatesController < ApplicationController
     redirect_to @candidate
   end
 
-  def destroy
-
-  end
-
   private
 
   def candidate_params

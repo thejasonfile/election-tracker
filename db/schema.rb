@@ -15,20 +15,21 @@ ActiveRecord::Schema.define(version: 20161024165947) do
   create_table "candidates", force: :cascade do |t|
     t.string   "name"
     t.string   "party"
-    t.integer  "electoral_votes"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "electoral_votes", default: 0
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "states", force: :cascade do |t|
     t.string   "name"
     t.integer  "electoral_votes"
     t.string   "predicted"
-    t.boolean  "called"
+    t.string   "winner"
+    t.boolean  "called",          default: false
     t.string   "picture_url"
-    t.integer  "candidate_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "candidate_id",    default: 1
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
 end
