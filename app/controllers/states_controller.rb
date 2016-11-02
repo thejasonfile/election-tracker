@@ -5,7 +5,7 @@ class StatesController < ApplicationController
   end
 
   def show
-  
+    @state = State.find(params[:id])
   end
 
   def new
@@ -13,13 +13,15 @@ class StatesController < ApplicationController
   end
 
   def create
-    @state = State.create(post_params(:name, :electoral_votes, :predicted, :called, :picture_url))
+    @state = State.create(state_params)
     byebug
     redirect_to @state
   end
 
-  def post_params(*args)
-    params.require(:state).permit(*args)
+  private
+
+  def state_params
+    params.require(:state).permit(:name, :electoral_votes, :predicted, :picture_url, :candidate_id)
   end
 
 end

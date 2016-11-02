@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20161024165947) do
     t.string   "predicted"
     t.boolean  "called"
     t.string   "picture_url"
+    t.integer  "candidate_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
