@@ -1,9 +1,10 @@
 <h1>All States</h1>
 
 <% @states.each do |state| %>
-  <h3><%= state.name %></h3>
-  <li><%= state.electoral_votes %></li>
-  <li><%= state.predicted %></li>
-  <li><%= state.picture_url %></li>
-  <li><%= state.called %></li>
+  <h3><%= link_to state.name, state_path(state.id) %></h3>
+  <li>Electoral Votes: <%= state.electoral_votes %></li>
+  <li>Predicted: <%= state.predicted %></li>
+  <li>Picture URL: <%= state.picture_url %></li>
+  <li>Called? <%= state.called %></li>
+  <li>Winner: <%= state.winner %></li>
 <% end %>

@@ -13,7 +13,6 @@ class StatesController < ApplicationController
   end
 
   def create
-    byebug
     @state = State.create(state_params)
     redirect_to @state
   end
@@ -31,7 +30,7 @@ class StatesController < ApplicationController
   private
 
   def state_params
-    params.require(:state).permit(:name, :electoral_votes, :predicted, :picture_url, :candidate_id)
+    params.require(:state).permit(:name, :electoral_votes, :predicted, :picture_url, :candidate_id, :called, :winner)
   end
 
 end

@@ -3,7 +3,10 @@
 <ul>
   <li>Name: <%= @state.name %></li>
   <li>Electoral Votes: <%= @state.electoral_votes %></li>
-  <li>Party: <%= @state.predicted %></li>
+  <li>Leaning: <%= @state.predicted %></li>
   <li>Called: <%= @state.called %></li>
   <li>Winner: <%= @state.winner %></li>
 </ul>
+
+<%= button_to "Edit State", edit_state_path, method: :get %>
+<%= button_to "Create a State", new_state_path, method: :get %>
