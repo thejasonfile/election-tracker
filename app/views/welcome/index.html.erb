@@ -1,0 +1,45 @@
+<h1>Candidates</h1>
+<hr />
+<div class="row fixed">
+  <div class="col-md-4">
+    <h2 class="candidate_name"><%= @candidates[1].name%></h2> <br />
+    <img src="img/clinton.jpg" alt="" />
+    <h4><%= @candidates[1].party %></h4>
+    <h4 class="candidate_votes"><%= @candidates[1].electoral_votes %></h4>
+    <h4>Votes Needed To Win: <%=@candidates[1].votes_needed %></h4>
+  </div><!--.col-md-4-->
+  <div class="col-md-4">
+    <h2>Unclaimed Votes</h2>
+    <h4 class="candidate_votes"><%= @candidates[0].electoral_votes%><h4>
+  </div><!--.col-md-4-->
+  <div class="col-md-4">
+    <h2 class="candidate_name"><%= @candidates[2].name%></h2> <br />
+    <img src="img/trump.jpg" alt="" />
+    <h4><%= @candidates[2].party%></h4>
+    <h4 class="candidate_votes"><%= @candidates[2].electoral_votes %></h4>
+    <h4>Votes Needed To Win: <%=@candidates[1].votes_needed %></h4>
+  </div><!--.col-md-4-->
+</div><!--.row-->
+
+<div class="row">
+  <h1>States</h1>
+  <hr />
+  <table>
+  <th>State Name</th>
+  <th>Electoral Votes</th>
+  <th>Predicted</th>
+  <th>Called?</th>
+  <th>Winner</th>
+<% @states.each do |state| %>
+  <tr>
+    <td><%= link_to state.name, state_path(state.id) %></td>
+    <td><%= state.electoral_votes %></td>
+    <td><%= state.predicted %></td>
+    <td><%= state.called %></td>
+    <td><%= state.winner %></td>
+    <td><%= button_to "Edit State", edit_state_path(state), method: :get %></td>
+  </tr>
+<% end %>
+
+</table>
+</div><!--.row-->
