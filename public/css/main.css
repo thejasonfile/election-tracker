@@ -2,22 +2,31 @@ h1 {
   text-align: center;
 }
 
-img {
-  max-width: 70%;
+body {
+  padding-top: 450px;
 }
 
 .fixed {
+  position: fixed;
+}
 
+.navbar {
+  margin-bottom: 1em;
 }
 
 .col-md-4 {
   text-align: center;
 }
 
+.hillary_pic {
+  max-width: 70%;
+}
+
+.trump_pic {
+  max-width: 70%;
+}
+
 .candidate_votes {
   font-size: 3em;
 }
 
-th, td {
-
-}

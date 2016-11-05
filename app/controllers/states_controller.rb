@@ -24,7 +24,7 @@ class StatesController < ApplicationController
   def update
     @state = State.find(params[:id])
     @state.update(state_params)
-    redirect_to @state
+    redirect_to root_path
   end
 
   private
