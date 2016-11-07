@@ -23,6 +23,8 @@ class StatesController < ApplicationController
 
   def update
     @state = State.find(params[:id])
+    @transfer = TransferVote.new(@state, params[:state][:winner], @state.candidate_id)
+    @transfer.run()
     @state.update(state_params)
     redirect_to root_path
   end
