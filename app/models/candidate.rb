@@ -8,13 +8,11 @@ class Candidate < ApplicationRecord
     270 - self.electoral_votes
   end
 
-  def tally_votes
-    votes = 0
-    states = State.where(winner: self.name)
-    states.each do |state| 
-      votes += state.electoral_votes
-    end
+  def calculate_votes
+    states = State.where(candidate_id: self.id)
+    votes = states.map { |state| state.electoral_votes}.sum
     self.electoral_votes = votes
+    self.save
   end
 
 

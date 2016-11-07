@@ -23,9 +23,9 @@ class StatesController < ApplicationController
 
   def update
     @state = State.find(params[:id])
-    @transfer = TransferVote.new(@state, params[:state][:winner], @state.candidate_id)
-    @transfer.run()
-    @state.update(state_params)
+    candidate_id = Candidate.find_by(name: params[:state][:winner]).id
+    @state.update(winner: params[:state][:winner], candidate_id: candidate_id)
+    Candidate.all.each do |candidate| candidate.calculate_votes end
     redirect_to root_path
   end
 
