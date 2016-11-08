@@ -2,12 +2,23 @@ h1 {
   text-align: center;
 }
 
-body {
-  padding-top: 450px;
+td {
+  font-size: 1.4em;
 }
 
-.fixed {
-  position: fixed;
+td a {
+  color: black;
+  text-decoration: none;
+}
+
+.democrat {
+  background-color: rgba(0,0,255,0.5);
+  border: 2px solid rgba(0,0,255,1);
+}
+
+.republican {
+  background-color: rgba(255,0,0,0.5);
+  border: 2px solid rgba(255,0,0,1);
 }
 
 .navbar {
@@ -19,11 +30,11 @@ body {
 }
 
 .hillary_pic {
-  max-width: 40%;
+  max-width: 20%;
 }
 
 .trump_pic {
-  max-width: 40%;
+  max-width: 20%;
 }
 
 .candidate_votes {

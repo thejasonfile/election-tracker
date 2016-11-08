@@ -1,4 +1,5 @@
-<div class="row navbar navbar-default navbar-fixed-top">
+<h1>Presedential Election 2016</h1>
+<div class="row navbar navbar-default">
   <div class="col-md-4 democrat">
     <h2 class="candidate_name"><%= @candidates[1].name%></h2> <br />
     <img class="hillary_pic" src="img/clinton.jpg" alt="Picture of Hillary Clinton" />
@@ -35,7 +36,7 @@
     <%= form_for state do |f| %>
     <td><%= f.check_box :called %></td>
     <td><%= f.select :winner, [['Hillary Clinton'], ['Donald Trump'], ['Not Called']] %></td>
-    <td><%= f.submit "Update State" %></td>
+    <td><%= f.submit "Update Votes" %></td>
     <% end %>
   </tr>
 <% end %>
