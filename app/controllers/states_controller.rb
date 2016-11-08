@@ -24,7 +24,7 @@ class StatesController < ApplicationController
   def update
     @state = State.find(params[:id])
     candidate_id = Candidate.find_by(name: params[:state][:winner]).id
-    @state.update(winner: params[:state][:winner], candidate_id: candidate_id)
+    @state.update(winner: params[:state][:winner], candidate_id: candidate_id, called: params[:state][:called])
     Candidate.all.each do |candidate| candidate.calculate_votes end
     redirect_to root_path
   end

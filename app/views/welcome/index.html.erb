@@ -4,7 +4,7 @@
     <h2 class="candidate_name"><%= @candidates[1].name%></h2> <br />
     <img class="hillary_pic" src="img/clinton.jpg" alt="Picture of Hillary Clinton" />
     <h4><%= @candidates[1].party %></h4>
-    <h4 class="candidate_votes"><%= @candidates[1].electoral_votes %></h4>
+    <h4 class="candidate_votes">Total Votes: <%= @candidates[1].electoral_votes %></h4>
     <h4>Votes Needed To Win: <%=@candidates[1].votes_needed %></h4>
   </div><!--.col-md-4-->
   <div class="col-md-4">
@@ -15,7 +15,7 @@
     <h2 class="candidate_name"><%= @candidates[2].name%></h2> <br />
     <img class="trump_pic" src="img/trump.jpg" alt="Picture of Donald Trump" />
     <h4><%= @candidates[2].party%></h4>
-    <h4 class="candidate_votes"><%= @candidates[2].electoral_votes %></h4>
+    <h4 class="candidate_votes">Total Votes: <%= @candidates[2].electoral_votes %></h4>
     <h4>Votes Needed To Win: <%=@candidates[2].votes_needed %></h4>
   </div><!--.col-md-4-->
 </div><!--.row-->
@@ -36,7 +36,7 @@
     <%= form_for state do |f| %>
     <td><%= f.check_box :called %></td>
     <td><%= f.select :winner, [['Hillary Clinton'], ['Donald Trump'], ['Not Called']] %></td>
-    <td><%= f.submit "Update Votes" %></td>
+    <td><%= f.submit "Update State" %></td>
     <% end %>
   </tr>
 <% end %>
